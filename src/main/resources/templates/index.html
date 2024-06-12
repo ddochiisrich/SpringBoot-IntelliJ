@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Video player</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/js/bootstrap.bundle.min.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-container rounded-1">
+        <video id="video" width="640" height="360">
+            <source src="/videos/introduce.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="range-controls d-flex justify-content-center align-items-center py-2">
+            <div id="timeDisplay" class="pe-3 ptext">0:00 / 0:00</div>
+            <input type="range" id="seekBar" value="0">
+        </div>
+        <div class="text-center">
+
+        </div>
+        <div class="controls d-flex align-items-center playertoolbar  py-2">
+            <div class="d-flex align-items-center col-6 text-start ps-5">
+                <button id="rewindBtn" class="pe-4 d-flex align-items-center "><i class="fa-solid fa-rotate-left"></i></button>
+                <button id="playPauseBtn" class="pe-4 d-flex align-items-center "><i class="fa-solid fa-play"></i></button>
+                <button id="forwardBtn" class="pe-4 d-flex align-items-center "><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
+            <div class="d-flex align-items-center col-6 pe-3 d-flex align-items-center justify-content-end">
+
+                <div class="ms-4 d-flex align-items-center text-start" style="width: 20px"><button id="muteBtn"><i class="fa-solid fa-volume-high"></i></button></div>
+                <div class="ms-4 d-flex align-items-center "><input type="range" id="volumeBar" min="0" max="1" step="0.01" value="1" style="width: 80px"></div>
+                <div class="ms-4 d-flex align-items-center ptext"><button id="speedBtn">x1</button></div>
+                <div class="ms-4 d-flex align-items-center "><button id="fullScreenBtn"><i class="fa-solid fa-expand"></i></button></div>
+
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
