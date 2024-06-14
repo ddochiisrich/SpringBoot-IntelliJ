@@ -10,7 +10,7 @@ public class HomeController {
     @GetMapping("/")
     public String home(Model model){
 
-        model.addAttribute("message", "Video Player");
+        model.addAttribute("message", "Video Player Test");
 
         return "index";
     }
